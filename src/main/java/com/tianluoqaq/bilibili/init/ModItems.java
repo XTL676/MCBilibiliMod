@@ -7,6 +7,7 @@ import com.tianluoqaq.bilibili.Main;
 import com.tianluoqaq.bilibili.items.ItemBase;
 import com.tianluoqaq.bilibili.items.food.EffectFoodBase;
 import com.tianluoqaq.bilibili.items.tools.ToolAxe;
+import com.tianluoqaq.bilibili.items.tools.ToolPickaxe;
 import com.tianluoqaq.bilibili.items.tools.ToolSword;
 
 import net.minecraft.creativetab.CreativeTabs;
@@ -15,6 +16,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemFood;
+import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemSword;
 import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.common.util.EnumHelper;
@@ -40,6 +42,8 @@ public class ModItems
 	public static final Item bibox = new ItemBase("bibox", Main.ITEM_TAB);// ﬂŸ¡®ﬂŸ¡®ÀÈ∆¨
 	public static final ItemSword BILIBILI_SWORD = new ToolSword("bilibili_sword", Main.TOOL_TAB, MATERIAL_BILIBILI);// ﬂŸ¡®ﬂŸ¡®Ω£
 	public static final ItemAxe BILIBILI_AXE = new ToolAxe("bilibili_axe", Main.TOOL_TAB, MATERIAL_BILIBILI);// ﬂŸ¡®ﬂŸ¡®∏´
+	public static final ItemPickaxe BILIBILI_PICKAXE = new ToolPickaxe("bilibili_pickaxe", Main.TOOL_TAB,
+			MATERIAL_BILIBILI);// ﬂŸ¡®ﬂŸ¡®∏‰
 
 	/******************************************foods(≤ƒ¡œ)******************************************************************/
 

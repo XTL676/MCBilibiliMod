@@ -7,6 +7,7 @@ item.bilibili_logo.name=哔哩哔哩标志
 //tools
 item.bilibili_sword.name=哔哩哔哩剑
 item.bilibili_axe.name=哔哩哔哩斧
+item.bilibili_pickaxe.name=哔哩哔哩镐
 
 //blocks
 tile.bilibili_block.name=哔哩哔哩块

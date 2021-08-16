@@ -7,6 +7,7 @@ item.bilibili_logo.name=Bilibili Logo
 //tools
 item.bilibili_sword.name=Bilibili Sword
 item.bilibili_axe.name=Bilibili Axe
+item.bilibili_pickaxe.name=Bilibili Pickaxe
 
 //blocks
 tile.bilibili_block.name=Bilibili Block
