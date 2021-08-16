@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "BB ",
+        "B B",
+        "BB "
+    ],
+    
+    "key":
+    {
+        "B":
+        {
+            "item": "bilibilitianlovol:bibox"
+        }
+    },
+    
+    "result":
+    {
+        "item": "bilibilitianlovol:bilibili_block",
+        "count": 1
+    }
+}

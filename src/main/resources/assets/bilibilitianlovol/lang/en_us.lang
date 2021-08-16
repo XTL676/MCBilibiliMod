@@ -1,0 +1,20 @@
+//items
+item.bibox.name=Bilibili Box
+
+//foods
+item.bilibili_logo.name=Bilibili Logo
+
+//tools
+item.bilibili_sword.name=Bilibili Sword
+item.bilibili_axe.name=Bilibili Axe
+
+//blocks
+tile.bilibili_block.name=Bilibili Block
+
+//tabs
+itemGroup.block_tab=Block Tab
+itemGroup.item_tab=Item Tab
+itemGroup.tool_tab=Tool Tab
+
+//entities
+entity.bilibili_slime.name=Bilibili Slime

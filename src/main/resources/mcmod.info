@@ -1,0 +1,16 @@
+[
+{
+  "modid": "bilibilitianlovol",
+  "name": "Bilibili",
+  "description": "This is a mod about bilibili. My bilibili url is https://space.bilibili.com/1275394062.",
+  "version": "Beta-1.2.2",
+  "mcversion": "1.12.2",
+  "url": "https://www.tianlovol.ml",
+  "updateUrl": "https://www.tianlovol.ml",
+  "authorList": ["TianluoQAQ"],
+  "credits": "For making this just for fun",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
