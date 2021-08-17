@@ -47,12 +47,19 @@ public class ModItems
 
 	/******************************************foods(材料)******************************************************************/
 
-	/*
+	/**
 	 * 名称为 bilibili_logo 饱食度 6(鸡腿) 饱和度 2.3f(面包2.4f) 能喂给狼吃 位于创造模式物品栏的食物一栏
 	 * 
 	 * PotionEffect(MobEffects.药水效果名称, 持续时间【以“游戏刻”为单位,1游戏刻 = 0.05秒】, 药水效果等级【从0开始,0 =
 	 * 等级1】, 是否与信标有关系, 是否显示药水粒子效果)
+	 * 
+	 * 食用以后 速度24 60秒, 抗性3 120秒, 水下呼吸256 1200秒, 幸运1 1200秒, 挖掘疲劳256 1200秒, 跳跃提升2 600秒
 	 */
 	public static final ItemFood BILIBILI_LOGO = new EffectFoodBase("bilibili_logo", 6, 2.3f, true, CreativeTabs.FOOD,
-			new PotionEffect(MobEffects.SPEED, 60 * 20, 23, false, false));// 哔哩哔哩标志
+			new PotionEffect[] { new PotionEffect(MobEffects.SPEED, 60 * 20, 23, false, true),
+					new PotionEffect(MobEffects.RESISTANCE, 120 * 20, 3, false, true),
+					new PotionEffect(MobEffects.WATER_BREATHING, 1200 * 20, 255, false, true),
+					new PotionEffect(MobEffects.LUCK, 1200 * 20, 0, false, true),
+					new PotionEffect(MobEffects.MINING_FATIGUE, 1200 * 20, 255, false, true),
+					new PotionEffect(MobEffects.JUMP_BOOST, 600 * 20, 1, false, true) });// 哔哩哔哩标志
 }

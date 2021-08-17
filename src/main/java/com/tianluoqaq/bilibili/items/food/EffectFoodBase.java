@@ -14,7 +14,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class EffectFoodBase extends FoodBase implements IHasModel
 {
 
-	private PotionEffect effect;// 药水效果
+	private PotionEffect[] effect;// 单个/多个药水效果
 
 	/**
 	 * @param name			食物名称
@@ -22,10 +22,10 @@ public class EffectFoodBase extends FoodBase implements IHasModel
 	 * @param saturation	能补充的饱和度
 	 * @param isWolfFood	是否能喂给狼(驯服类实体)吃
 	 * @param tab			创造模式标签
-	 * @param effect		药水效果
+	 * @param effect		单个/多个药水效果
 	 */
 	public EffectFoodBase(String name, int amount, float saturation, boolean isWolfFood, CreativeTabs tab,
-			PotionEffect effect)
+			PotionEffect[] effect)
 	{
 		super(name, amount, saturation, isWolfFood, tab);
 
@@ -37,14 +37,17 @@ public class EffectFoodBase extends FoodBase implements IHasModel
 	@Override
 	protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player)
 	{
-		if (!worldIn.isRemote)
+		if (!worldIn.isRemote && effect.length != 0)// 检查传入的药水效果参数数量是否为0,如果是,则不进行附加药水效果的操作
 		{
-			player.addPotionEffect(new PotionEffect(effect.getPotion(), effect.getDuration(), effect.getAmplifier(),
-					effect.getIsAmbient(), effect.doesShowParticles()));
+			for (int i = 0; i < effect.length; i++)
+			{
+				player.addPotionEffect(new PotionEffect(effect[i].getPotion(), effect[i].getDuration(),
+						effect[i].getAmplifier(), effect[i].getIsAmbient(), effect[i].doesShowParticles()));
+			}
 		}
 	}
-	
-	//返回此食物是有药水效果的
+
+	// 返回此食物是有药水效果的
 	@SideOnly(Side.CLIENT)
 	public boolean hasEffect(ItemStack stack)
 	{
