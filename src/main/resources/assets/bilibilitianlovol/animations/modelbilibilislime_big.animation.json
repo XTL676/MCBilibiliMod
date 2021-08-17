@@ -1,0 +1,84 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.ModelBilibiliSlime_Big.antshake": {
+			"animation_length": 0.22,
+			"bones": {
+				"LAntRotation": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 17.5]
+						},
+						"0.12": {
+							"vector": [0, 0, 50],
+							"easing": "easeInOutQuad"
+						},
+						"0.16": {
+							"vector": [0, 0, 17.5],
+							"easing": "easeInOutQuad"
+						},
+						"0.24": {
+							"vector": [0, 0, 0],
+							"easing": "easeInOutQuad"
+						}
+					}
+				},
+				"RAntRotation": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, -15]
+						},
+						"0.12": {
+							"vector": [0, 0, -55],
+							"easing": "easeInOutQuad"
+						},
+						"0.16": {
+							"vector": [0, 0, -15],
+							"easing": "easeInOutQuad"
+						},
+						"0.24": {
+							"vector": [0, 0, 0],
+							"easing": "easeInOutQuad"
+						}
+					}
+				}
+			}
+		},
+		"animation.ModelBilibiliSlime_Big.idle": {
+			"animation_length": 0.6,
+			"bones": {
+				"LAntRotation": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.2": {
+							"vector": [2.5, 0, 22.5],
+							"easing": "linear"
+						},
+						"0.4": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						}
+					}
+				},
+				"RAntRotation": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.2": {
+							"vector": [0, 0, -30],
+							"easing": "linear"
+						},
+						"0.4": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

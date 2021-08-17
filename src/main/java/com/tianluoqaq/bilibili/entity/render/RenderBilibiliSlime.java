@@ -5,7 +5,7 @@ import com.tianluoqaq.bilibili.entity.model.ModelBilibiliSlime;
 import net.minecraft.client.renderer.entity.RenderManager;
 import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
 
-//BilibiliSlimeäÖÈ¾Àà
+//ßÙÁ¨ßÙÁ¨Ê·À³Ä·äÖÈ¾Àà
 public class RenderBilibiliSlime extends GeoEntityRenderer<EntityBilibiliSlime>
 {
 

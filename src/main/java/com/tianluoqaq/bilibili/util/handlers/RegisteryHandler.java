@@ -62,7 +62,7 @@ public class RegisteryHandler
 	
 	public static void preInitRegistries()
 	{
-		EntityInit.registerEntities();//调用方法，注册“bilibili_slime”实体
+		EntityInit.registerEntities();//调用方法，注册实体
 		RenderHandler.RegisterEntityRenders();//调用方法，注册渲染“bilibili_slime”实体
 	}
 	

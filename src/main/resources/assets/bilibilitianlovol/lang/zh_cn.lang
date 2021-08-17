@@ -19,3 +19,5 @@ itemGroup.tool_tab=工具栏
 
 //entities
 entity.bilibili_slime.name=哔哩哔哩史莱姆
+entity.bilibili_slime_small.name=哔哩哔哩小史莱姆
+entity.bilibili_slime_big.name=哔哩哔哩大史莱姆

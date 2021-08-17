@@ -19,3 +19,5 @@ itemGroup.tool_tab=Tool Tab
 
 //entities
 entity.bilibili_slime.name=Bilibili Slime
+entity.bilibili_slime_small.name=Bilibili Small Slime
+entity.bilibili_slime_big.name=Bilibili Big Slime
