@@ -1,0 +1,42 @@
+modLoader="javafml"
+
+loaderVersion="[36,)"
+
+license="Apache License Version 2.0"
+
+[[mods]]
+
+modId="bilibilimod"
+
+version="Beta-1.5.0"
+
+displayName="Bilibili Mod" #显示名称
+
+displayURL="https://www.tianlovol.ml"
+
+#logoFile="bilibilimod.png" #模组图标
+
+credits="Bilibili Mod by TianluoQAQ."
+
+authors="TianluoQAQ" #作者
+
+#模组描述
+description='''
+This is a mod about bilibili and it has no relationship between bilibili.com.
+My bilibili url is https://space.bilibili.com/1275394062
+Mod by TianluoQAQ.
+'''
+
+[[dependencies.bilibilimod]] 
+    modId="forge"
+    mandatory=true
+    versionRange="[36,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.bilibilimod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"
