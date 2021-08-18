@@ -16,6 +16,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import software.bernie.geckolib3.GeckoLib;
 
 //模组主入口函数
@@ -23,7 +24,7 @@ import software.bernie.geckolib3.GeckoLib;
 public class Main
 {
 
-	//示例
+	// 示例
 	@Instance
 	public static Main instance;
 
@@ -39,10 +40,10 @@ public class Main
 	@EventHandler
 	public static void Init(FMLInitializationEvent event)
 	{
-		//Geckolib初始化
+		// Geckolib初始化
 		GeckoLib.initialize();
-		
-		//模组内的熔炉炼制配方初始化
+
+		// 模组内的熔炉炼制配方初始化
 		ModRecipes.init();
 	}
 
@@ -52,9 +53,16 @@ public class Main
 
 	}
 
+	// DEBUG
+	@EventHandler
+	public static void ServerInit(FMLServerStartingEvent event)
+	{
+		RegisteryHandler.serverRegistries(event);
+	}
+
 	// 新建创建模式下E键物品栏的标签页
-	public static final CreativeTabs BLOCK_TAB = new BlockTab();//方块
-	public static final CreativeTabs ITEM_TAB = new ItemTab();//物品
-	public static final CreativeTabs TOOL_TAB = new ToolTab();//工具
+	public static final CreativeTabs BLOCK_TAB = new BlockTab();// 方块
+	public static final CreativeTabs ITEM_TAB = new ItemTab();// 物品
+	public static final CreativeTabs TOOL_TAB = new ToolTab();// 工具
 
 }

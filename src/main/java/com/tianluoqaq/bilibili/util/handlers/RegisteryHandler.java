@@ -1,15 +1,17 @@
 package com.tianluoqaq.bilibili.util.handlers;
 
+import com.tianluoqaq.bilibili.commands.CommandShowBiome;
+import com.tianluoqaq.bilibili.commands.CommandShowLoadedEntitiesList;
 import com.tianluoqaq.bilibili.entity.EntityInit;
 import com.tianluoqaq.bilibili.init.ModBlocks;
 import com.tianluoqaq.bilibili.init.ModItems;
 import com.tianluoqaq.bilibili.util.IHasModel;
-
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 //注册句柄
@@ -21,9 +23,7 @@ public class RegisteryHandler
 	// 注册物品
 	public static void onItemRegistry(RegistryEvent.Register<Item> event)
 	{
-
 		event.getRegistry().registerAll(ModItems.ITEMS.toArray(new Item[0]));
-
 	}
 
 	@SubscribeEvent
@@ -59,16 +59,23 @@ public class RegisteryHandler
 		}
 
 	}
-	
+
 	public static void preInitRegistries()
 	{
-		EntityInit.registerEntities();//调用方法，注册实体
-		RenderHandler.RegisterEntityRenders();//调用方法，注册渲染“bilibili_slime”实体
+		EntityInit.registerEntities();// 调用方法，注册实体
+		RenderHandler.RegisterEntityRenders();// 调用方法，注册实体渲染
 	}
-	
+
 	public static void postInitRegistries()
 	{
-		
+
+	}
+
+	// DEBUG
+	public static void serverRegistries(FMLServerStartingEvent event)
+	{
+		event.registerServerCommand(new CommandShowBiome());
+		event.registerServerCommand(new CommandShowLoadedEntitiesList());
 	}
 
 }

@@ -2,10 +2,12 @@ package com.tianluoqaq.bilibili.entity;
 
 import com.tianluoqaq.bilibili.util.handlers.LootTableHandler;
 
+import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.monster.EntitySlime;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.World;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
@@ -25,6 +27,7 @@ public class EntityBilibiliSlime_Small extends EntitySlime implements IAnimatabl
 	{
 		super(worldIn);
 		this.ignoreFrustumCheck = true;
+		this.setSlimeSize(1, true);
 	}
 
 	// 修改哔哩哔哩史莱姆的弹跳粒子效果为蓝色水滴粒子
@@ -41,12 +44,21 @@ public class EntityBilibiliSlime_Small extends EntitySlime implements IAnimatabl
 		return LootTableHandler.BILIBILI_SLIME;
 	}
 
-	// 设置大小为小史莱姆一样的大小
+	// 设置放置生物蛋生成的生物大小为小史莱姆一样的大小
 	@Override
 	public void readEntityFromNBT(NBTTagCompound compound)
 	{
 		super.readEntityFromNBT(compound);
 		this.setSlimeSize(1, true);
+	}
+
+	// 设置自然生成大小为小史莱姆一样的大小
+	@Override
+	public IEntityLivingData onInitialSpawn(DifficultyInstance difficulty, IEntityLivingData livingdata)
+	{
+		IEntityLivingData IELD = super.onInitialSpawn(difficulty, livingdata);
+		this.setSlimeSize(1, true);
+		return IELD;
 	}
 
 	// 哔哩哔哩小史莱姆的动作
