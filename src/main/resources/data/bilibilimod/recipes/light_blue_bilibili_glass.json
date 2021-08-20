@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"pp ",
+		"p p",
+		"pp "
+	],
+	"key": {
+		"p": {
+			"item": "bilibilimod:bibox"
+		}
+	},
+	"result": {
+		"item": "bilibilimod:light_blue_bilibili_glass",
+		"count": 1
+	}
+}
